@@ -24,9 +24,6 @@ struct AEROFLOT {
 
 
 /* FUNCTIONS DECLARATIONS */
-
-
-
 void printDeportureDateTimes(Date date, Time time) {
 	cout << "date: " << date.day << "." << date.month << "." << date.year << endl;
 	cout << "time: " << time.hours << ":" << time.minutes << endl << endl;
@@ -43,7 +40,7 @@ void printGreeting() {
 	printLineOfChars();
 }
 
-void printDeporturesByName(AEROFLOT deportures[], string dest_name) {
+void printDeporturesByName(AEROFLOT deportures[DEPORTURES_LEN], string dest_name) {
 	bool findedMoreZero = false;
 
 	for (int i = 0; i < DEPORTURES_LEN; i++)
@@ -88,7 +85,7 @@ int main() {
 	}
 
 	string queryName;
-	cout << "*** SEARCHING MODE ***" << endl; "PLEASE ENTER DESTINATION NAME: "; cin >> queryName;
+	cout << "*** SEARCHING MODE ***" << endl << "PLEASE ENTER DESTINATION NAME: "; cin >> queryName;
 
 	printDeporturesByName(deportures, queryName);
 	printLineOfChars();
